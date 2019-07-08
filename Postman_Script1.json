@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "087dc4f3-c6cb-4b26-9de6-69d4d66dead6",
+		"name": "API_Automation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Basic",
+			"item": [
+				{
+					"name": "get list of users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2ed3a955-45f9-4630-aa7a-e9f9b5b2c638",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://reqres.in/api/users?page=2",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
